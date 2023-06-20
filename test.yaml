@@ -1,0 +1,70 @@
+- name: bluestore_cache_autotune
+  type: bool
+  startValue: true
+- name: bdev_aio
+  type: bool
+  startValue: true
+- name: bdev_async_discard
+  type: bool
+  startValue: false
+- name: bdev_enable_discard
+  type: bool
+  startValue: false
+- name: bluefs_sync_write
+  type: bool
+  startValue: false
+# - name: bluestore_cache_size_ssd
+#   type: float
+#   startValue: 3221225472
+#   min: 1000000000  # 1GB
+#   max: 10000000000 # 10GB
+- name: bluestore_cache_kv_ratio
+  type: float
+  startValue: 0.45
+  min: 0.3
+  max: 0.9
+- name: bdev_aio_max_queue_depth
+  type: int
+  startValue: 1024
+  min: 10
+  max: 10000
+- name: bdev_read_buffer_alignment
+  type: float
+  startValue: 4096
+  min: 1024
+  max: 10000
+- name: bluestore_cache_autotune_interval
+  type: float
+  startValue: 5
+  min: 1
+  max: 50
+- name: bluestore_cache_trim_interval
+  type: float
+  startValue: 0.05
+  min: 0.01
+  max: 0.9
+# - name: bluestore_cache_meta_ratio
+#   type: float
+#   startValue: 0.45
+#   min: 0.3
+#   max: 0.9
+# - name: osd_min_pg_log_entries
+#   type: int
+#   startValue: 250
+#   min: 1
+#   max: 500
+# - name: osd_max_pg_log_entries
+#   type: int
+#   startValue: 10000
+#   min: 1
+#   max: 100000
+# - name: osd_pg_log_dups_tracked
+#   type: int
+#   startValue: 3000
+#   min: 1
+#   max: 30000
+# - name: osd_pg_log_trim_min
+#   type: int
+#   startValue: 100
+#   min: 1
+#   max: 1000
